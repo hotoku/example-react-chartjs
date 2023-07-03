@@ -1,4 +1,4 @@
-import { Paper, Box } from "@mui/material";
+import { Box, Card } from "@mui/material";
 import { useAtomValue } from "jotai";
 import { Line } from "react-chartjs-2";
 import { asyncValues } from "../atoms";
@@ -29,9 +29,9 @@ function ChartSheet(): JSX.Element {
   const values = useAtomValue(asyncValues);
   if (values === undefined) {
     return (
-      <Paper>
+      <Card>
         <Box className="chart-message">not loaded</Box>{" "}
-      </Paper>
+      </Card>
     );
   }
 
@@ -41,11 +41,11 @@ function ChartSheet(): JSX.Element {
   };
 
   return (
-    <Paper>
+    <Card>
       <Box className="chart-base">
         <Line data={graphData}></Line>
       </Box>
-    </Paper>
+    </Card>
   );
 }
 

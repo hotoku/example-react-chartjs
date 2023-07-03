@@ -1,4 +1,4 @@
-import { Paper, Box, Button } from "@mui/material";
+import { Box, Button, Card } from "@mui/material";
 import { useSetAtom } from "jotai";
 import { MouseEventHandler, useState } from "react";
 import { download } from "../api";
@@ -22,13 +22,13 @@ function FormSheet(): JSX.Element {
   };
 
   return (
-    <Paper>
+    <Card>
       <Box className="form-base">
         <Button variant="contained" disabled={loading} onClick={clickHandler}>
           download
         </Button>
       </Box>
-    </Paper>
+    </Card>
   );
 }
 
