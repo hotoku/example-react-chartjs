@@ -30,7 +30,7 @@ function ChartSheet(): JSX.Element {
   if (values === undefined) {
     return (
       <Card>
-        <Box className="chart-message">not loaded</Box>{" "}
+        <Box className="chart-message">not loaded</Box>
       </Card>
     );
   }
